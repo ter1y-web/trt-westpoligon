@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRT Westpoligon — Единая транспортная система ДФО</title>
+    
+    <!-- Подключаем шрифты и стильные иконки FontAwesome -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Рекламный трекер / Скрипт монетизации -->
+    <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1">
+      (function () {
+          var script = document.createElement("script");
+          script.async = 1;
+          script.src = 'https://emrldtp.cc';
+          document.head.appendChild(script);
+      })();
+    </script>
+</head>
+<body>
+
+    <!-- БЛОК 1: Шапка сайта (Header) -->
+    <header class="header">
+        <div class="logo">trt <span>westpoligon</span></div>
+        <nav class="nav">
+            <a href="#" class="active"><i class="fa-solid fa-plane"></i> Авиабилеты</a>
+            <a href="#"><i class="fa-solid fa-hotel"></i> Отели <small>Скоро</small></a>
+            <a href="#"><i class="fa-solid fa-ship"></i> Морские рейсы <small>Скоро</small></a>
+            <a href="#"><i class="fa-solid fa-bus"></i> Наземные рейсы <small>Скоро</small></a>
+        </nav>
+        <div class="header-actions">
+            <button class="btn-region" id="regionBtn"><i class="fa-solid fa-location-dot"></i> Выбрать регион</button>
+            <button class="btn-login"><i class="fa-solid fa-user"></i> Войти</button>
+        </div>
+    </header>
+
+    <!-- БЛОК 2: Главный баннер и форма поиска -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Единая транспортная система Дальнего Востока</h1>
+            <p>Поиск билетов, мониторинг субсидий для жителей ДФО и транспортные новости всех 11 регионов в одном месте.</p>
+            
+            <div class="search-form">
+                <div class="input-group">
+                    <label><i class="fa-solid fa-plane-departure"></i> Откуда (IATA код)</label>
+                    <input type="text" id="searchFrom" placeholder="Например: YKS" max-length="3">
+                </div>
+                <div class="input-group">
+                    <label><i class="fa-solid fa-plane-arrival"></i> Куда (IATA код)</label>
+                    <input type="text" id="searchTo" placeholder="Например: VVO" max-length="3">
+                </div>
+                <div class="input-group">
+                    <label><i class="fa-solid fa-calendar-days"></i> Вылет</label>
+                    <input type="date" id="searchDate">
+                </div>
+                <button class="btn-search" id="searchBtn">Найти билеты</button>
+            </div>
+            
+            <div class="subsidy-filter">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="subsidyCheck">
+                    Показывать только субсидированные рейсы для жителей ДФО
+                </label>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 3: Интерактивное Дашборд-Табло на 20 направлений -->
+    <section class="dashboard">
+        <div class="dashboard-header">
+            <h2><i class="fa-solid fa-table-list"></i> Мониторинг ключевых авиахабов и маршрутов ДФО</h2>
+            <span class="update-time"><i class="fa-solid fa-rotate"></i> Живые цены напрямую из кэша API</span>
+        </div>
+        
+        <div class="table-container">
+            <table class="flights-table">
+                <thead>
+                    <tr>
+                        <th>Тип</th>
+                        <th>Направление рейса</th>
+                        <th>Статус рейса</th>
+                        <th>Субсидия</th>
+                        <th>Мин. цена</th>
+                        <th>Региональный ТГК</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+<!-- Данные будут генерироваться и обновляться автоматически с помощью JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- БЛОК 4: Подвал -->
+    <footer class="footer">
+        <p>© 2026 TRT Westpoligon. Единая цифровая инфраструктура ДФО. Все права защищены.</p>
+        <p>Разработка и дата-центры: г. Мирный (Республика Саха Якутия).</p>
+    </footer>
+
+    <!-- Подключение скрипта логики -->
+    <script src="script.js"></script>
+</body>
+</html>
